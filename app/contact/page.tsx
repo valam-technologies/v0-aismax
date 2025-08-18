@@ -84,7 +84,7 @@ export default function Contact() {
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">
         <div className="absolute inset-0">
-          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-purple-900/20 to-pink-900/20"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-gray-900/20 via-slate-900/20 to-gray-800/20"></div>
           <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-900 to-black opacity-90"></div>
         </div>
 
@@ -92,8 +92,8 @@ export default function Contact() {
           <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <div className="flex justify-center mb-6">
               <div className="relative">
-                <Shield className="w-16 h-16 text-blue-400" />
-                <Sparkles className="w-6 h-6 text-yellow-400 absolute -top-2 -right-2" />
+                <Shield className="w-16 h-16 text-gray-400" />
+                <Sparkles className="w-6 h-6 text-gray-300 absolute -top-2 -right-2" />
               </div>
             </div>
 
@@ -102,17 +102,17 @@ export default function Contact() {
                 Contact Our Experts
               </span>
               <br />
-              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Let's Secure Your
+              <span className="bg-gradient-to-r from-gray-300 to-gray-500 bg-clip-text text-transparent">
+                Let's Transform Your
               </span>
               <br />
-              <span className="bg-gradient-to-r from-purple-400 to-pink-400 bg-clip-text text-transparent">
-                Assets Together
+              <span className="bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent">
+                Business Together
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Ready to enhance your security with artificial intelligence? Our AI experts are here to help you implement
-              the perfect intelligent security solution for your organization's unique needs.
+              Ready to enhance your operations with artificial intelligence? Our AI experts are here to help you
+              implement the perfect intelligent technology solution for your organization's unique needs.
             </p>
           </motion.div>
         </div>
@@ -145,7 +145,7 @@ export default function Contact() {
                   </p>
                   <button
                     onClick={resetForm}
-                    className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold transition-colors"
+                    className="bg-gray-600 hover:bg-gray-700 text-white px-6 py-3 rounded-xl font-semibold transition-colors"
                   >
                     Send Another Message
                   </button>
@@ -168,7 +168,7 @@ export default function Contact() {
                         value={formData.name}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-gray-500 focus:outline-none transition-colors"
                         placeholder="Enter your full name"
                       />
                     </div>
@@ -184,7 +184,7 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         required
-                        className="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition-colors"
+                        className="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-gray-500 focus:outline-none transition-colors"
                         placeholder="Enter your email"
                       />
                     </div>
@@ -200,7 +200,7 @@ export default function Contact() {
                       name="company"
                       value={formData.company}
                       onChange={handleChange}
-                      className="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition-colors"
+                      className="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-gray-500 focus:outline-none transition-colors"
                       placeholder="Enter your company name"
                     />
                   </div>
@@ -216,15 +216,15 @@ export default function Contact() {
                       onChange={handleChange}
                       required
                       rows={6}
-                      className="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-blue-500 focus:outline-none transition-colors resize-none"
-                      placeholder="Tell us about your security needs..."
+                      className="w-full px-4 py-3 bg-black border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:border-gray-500 focus:outline-none transition-colors resize-none"
+                      placeholder="Tell us about your technology needs..."
                     />
                   </div>
 
                   <button
                     type="submit"
                     disabled={isSubmitting}
-                    className="w-full bg-blue-600 hover:bg-blue-700 disabled:bg-gray-700 text-white px-8 py-4 rounded-xl font-semibold transition-colors flex items-center justify-center"
+                    className="w-full bg-gray-600 hover:bg-gray-700 disabled:bg-gray-700 text-white px-8 py-4 rounded-xl font-semibold transition-colors flex items-center justify-center"
                   >
                     {isSubmitting ? "Sending..." : "Send Message"}
                     {!isSubmitting && <Send className="w-5 h-5 ml-2" />}
@@ -244,8 +244,8 @@ export default function Contact() {
               <div>
                 <h2 className="text-3xl font-bold mb-6 text-white">Contact Information</h2>
                 <p className="text-gray-400 leading-relaxed mb-8">
-                  Get in touch with our AI security experts. We're here to answer your questions and help you implement
-                  intelligent security solutions that protect your organization.
+                  Get in touch with our AI technology experts. We're here to answer your questions and help you
+                  implement intelligent solutions that transform your organization.
                 </p>
               </div>
 
@@ -264,7 +264,7 @@ export default function Contact() {
                       className="bg-gray-900 p-6 rounded-2xl border border-gray-800 hover:border-gray-700 transition-colors"
                     >
                       <div className="flex items-start">
-                        <div className="bg-blue-600 p-3 rounded-xl mr-4">
+                        <div className="bg-gray-600 p-3 rounded-xl mr-4">
                           <info.icon className="w-6 h-6 text-white" />
                         </div>
 
@@ -273,14 +273,14 @@ export default function Contact() {
                           {isPhone && info.title === "North America Office" ? (
                             <a
                               href={`tel:${info.details}`}
-                              className="text-blue-400 hover:text-blue-300 font-medium text-lg"
+                              className="text-gray-300 hover:text-gray-200 font-medium text-lg"
                             >
                               {info.details}
                             </a>
                           ) : isPhone && info.title === "APAC Office" ? (
                             <a
                               href={`tel:${info.details}`}
-                              className="text-blue-400 hover:text-blue-300 font-medium text-lg"
+                              className="text-gray-300 hover:text-gray-200 font-medium text-lg"
                             >
                               {info.details}
                             </a>
@@ -289,7 +289,7 @@ export default function Contact() {
                               <div>
                                 <a
                                   href="mailto:canada@artificialintelligence.ai"
-                                  className="text-blue-400 hover:text-blue-300 font-medium"
+                                  className="text-gray-300 hover:text-gray-200 font-medium"
                                 >
                                   canada@artificialintelligence.ai
                                 </a>
@@ -297,7 +297,7 @@ export default function Contact() {
                               <div>
                                 <a
                                   href="mailto:malaysia@artificialintelligence.ai"
-                                  className="text-blue-400 hover:text-blue-300 font-medium"
+                                  className="text-gray-300 hover:text-gray-200 font-medium"
                                 >
                                   malaysia@artificialintelligence.ai
                                 </a>
@@ -327,9 +327,9 @@ export default function Contact() {
                     </div>
 
                     <div className="flex-1">
-                      <h3 className="text-xl font-semibold text-white mb-2">Security Emergency?</h3>
+                      <h3 className="text-xl font-semibold text-white mb-2">Technology Emergency?</h3>
                       <p className="text-gray-300 mb-4">
-                        If you're experiencing an active security incident, contact our AI-powered emergency response
+                        If you're experiencing a critical technology incident, contact our AI-powered emergency response
                         team immediately.
                       </p>
 
@@ -370,25 +370,27 @@ export default function Contact() {
             className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
-            <p className="text-xl text-gray-300">Quick answers to common questions about our AI security solutions.</p>
+            <p className="text-xl text-gray-300">
+              Quick answers to common questions about our AI technology solutions.
+            </p>
           </motion.div>
 
           <div className="space-y-6">
             {[
               {
-                question: "How quickly can Artificial Intelligence Systems deploy AI security solutions?",
+                question: "How quickly can Artificial Intelligence Systems deploy AI technology solutions?",
                 answer:
-                  "We can deploy basic AI security solutions within 24-48 hours for urgent needs. Comprehensive AI implementations typically require 1-2 weeks for proper planning, system integration, and AI model training to ensure optimal protection and performance.",
+                  "We can deploy basic AI technology solutions within 24-48 hours for urgent needs. Comprehensive AI implementations typically require 1-2 weeks for proper planning, system integration, and AI model training to ensure optimal performance and reliability.",
               },
               {
-                question: "Do your AI security systems integrate with existing infrastructure?",
+                question: "Do your AI technology systems integrate with existing infrastructure?",
                 answer:
-                  "Yes, our AI security solutions are designed to integrate seamlessly with existing security infrastructure, network systems, and monitoring equipment. We work with all major technology platforms and can enhance your current setup with intelligent capabilities.",
+                  "Yes, our AI technology solutions are designed to integrate seamlessly with existing infrastructure, network systems, and monitoring equipment. We work with all major technology platforms and can enhance your current setup with intelligent capabilities.",
               },
               {
                 question: "What level of AI training and support do you provide?",
                 answer:
-                  "Artificial Intelligence Systems provides comprehensive support including 24/7 AI-powered monitoring, dedicated account management, regular system optimization, and complete training for your staff on AI security systems and intelligent threat response procedures.",
+                  "Artificial Intelligence Systems provides comprehensive support including 24/7 AI-powered monitoring, dedicated account management, regular system optimization, and complete training for your staff on AI technology systems and intelligent response procedures.",
               },
               {
                 question: "How does Artificial Intelligence Systems ensure AI accuracy and compliance?",

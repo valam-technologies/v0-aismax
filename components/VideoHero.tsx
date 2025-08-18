@@ -115,7 +115,7 @@ const VideoHero: React.FC<VideoHeroProps> = ({
 
               {/* Main Headline */}
               <motion.h1
-                className="hero-headline text-white mb-6 text-shadow-lg"
+                className="hero-headline text-white mb-4 text-shadow-lg"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
@@ -131,7 +131,7 @@ const VideoHero: React.FC<VideoHeroProps> = ({
 
               {/* Subheading */}
               <motion.p
-                className="hero-subheadline text-gray-200 mb-8 max-w-2xl"
+                className="hero-subheadline text-gray-200 mb-6 max-w-2xl"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5 }}
@@ -141,7 +141,7 @@ const VideoHero: React.FC<VideoHeroProps> = ({
 
               {/* Trust Indicators */}
               <motion.div
-                className="flex flex-wrap items-center gap-6 mb-8"
+                className="flex flex-wrap items-center gap-6 mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.7 }}
@@ -162,7 +162,7 @@ const VideoHero: React.FC<VideoHeroProps> = ({
 
               {/* CTA Buttons */}
               <motion.div
-                className="flex flex-col sm:flex-row gap-4 mb-12"
+                className="flex flex-col sm:flex-row gap-4 mb-8"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.9 }}
