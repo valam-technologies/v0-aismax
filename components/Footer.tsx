@@ -105,7 +105,18 @@ const Footer = () => {
 
             {/* North America */}
             <div className="mb-8">
-              <h4 className="text-md font-semibold mb-4 text-gray-200">North America Office</h4>
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-8 h-6 rounded-sm overflow-hidden shadow-lg border border-gray-700">
+                  <Image
+                    src="/canada-flag-maple-leaf.png"
+                    alt="Canada Flag"
+                    width={32}
+                    height={24}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h4 className="text-md font-semibold text-gray-200">North America Office</h4>
+              </div>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-gray-400" />
@@ -128,7 +139,18 @@ const Footer = () => {
 
             {/* Asia-Pacific */}
             <div className="mb-8">
-              <h4 className="text-md font-semibold mb-4 text-gray-200">APAC Office</h4>
+              <div className="flex items-center space-x-3 mb-4">
+                <div className="w-8 h-6 rounded-sm overflow-hidden shadow-lg border border-gray-700">
+                  <Image
+                    src="/malaysia-flag.png"
+                    alt="Malaysia Flag"
+                    width={32}
+                    height={24}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <h4 className="text-md font-semibold text-gray-200">APAC Office</h4>
+              </div>
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-gray-400" />
