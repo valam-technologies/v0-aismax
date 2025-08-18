@@ -70,7 +70,7 @@ const VideoHero: React.FC<VideoHeroProps> = ({
   }
 
   return (
-    <section className="relative min-h-screen bg-black overflow-hidden pt-16 md:pt-20">
+    <section className="relative min-h-screen bg-black overflow-hidden pt-8 md:pt-12">
       {/* Animated Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-20 w-64 h-64 border border-white/20 rounded-full animate-pulse-slow"></div>
@@ -93,9 +93,9 @@ const VideoHero: React.FC<VideoHeroProps> = ({
       {/* Main Content */}
       <div className="relative z-10 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-5rem)] py-8">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-16 items-center min-h-[calc(100vh-4rem)] py-4">
             {/* Left Content */}
-            <div className="flex flex-col justify-center space-y-6">
+            <div className="flex flex-col justify-center space-y-4 lg:pr-8">
               {/* Badge */}
               <motion.div
                 className="inline-flex items-center space-x-2 bg-gradient-to-r from-slate-600/20 to-slate-800/20 backdrop-blur-sm border border-slate-400/30 rounded-full px-6 py-3 shadow-lg w-fit"
@@ -141,7 +141,7 @@ const VideoHero: React.FC<VideoHeroProps> = ({
 
               {/* Trust Indicators */}
               <motion.div
-                className="flex flex-wrap items-center gap-6 mb-6"
+                className="flex flex-wrap items-center gap-6 mb-4"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.7 }}
@@ -162,7 +162,7 @@ const VideoHero: React.FC<VideoHeroProps> = ({
 
               {/* CTA Buttons */}
               <motion.div
-                className="flex flex-col sm:flex-row gap-4 mb-8"
+                className="flex flex-col sm:flex-row gap-4 mb-6"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.9 }}
@@ -207,12 +207,12 @@ const VideoHero: React.FC<VideoHeroProps> = ({
 
             {/* Right Content - Enhanced Video */}
             <motion.div
-              className="relative flex justify-center lg:justify-end"
+              className="relative flex justify-center lg:justify-start items-center"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              <div className="relative w-full max-w-lg lg:max-w-none">
+              <div className="relative w-full max-w-lg lg:max-w-xl xl:max-w-2xl">
                 {/* Decorative Elements */}
                 <div className="absolute -top-4 -left-4 w-full h-full border border-white/20 rounded-2xl"></div>
 
@@ -226,7 +226,7 @@ const VideoHero: React.FC<VideoHeroProps> = ({
                   {isVideoLoaded ? (
                     <video
                       ref={videoRef}
-                      className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] object-cover"
+                      className="w-full h-[320px] sm:h-[400px] md:h-[480px] lg:h-[520px] xl:h-[580px] object-cover"
                       autoPlay
                       muted={isMuted}
                       loop
@@ -238,7 +238,7 @@ const VideoHero: React.FC<VideoHeroProps> = ({
                     </video>
                   ) : (
                     <div
-                      className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] bg-cover bg-center"
+                      className="w-full h-[320px] sm:h-[400px] md:h-[480px] lg:h-[520px] xl:h-[580px] bg-cover bg-center"
                       style={{ backgroundImage: `url(${fallbackImage})` }}
                     />
                   )}
@@ -290,21 +290,22 @@ const VideoHero: React.FC<VideoHeroProps> = ({
                     )}
                   </div>
 
-                  <div className="absolute -bottom-8 -right-8 space-y-3 hidden lg:block">
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-xl border border-gray-200 min-w-[140px]">
+                  {/* Better positioned floating stats for desktop */}
+                  <div className="absolute -bottom-6 -right-6 space-y-3 hidden lg:block">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-xl border border-gray-200 min-w-[160px]">
                       <div className="flex items-center space-x-3">
                         <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
                         <div>
-                          <div className="text-gray-900 font-bold text-base">99.9%</div>
+                          <div className="text-gray-900 font-bold text-lg">99.9%</div>
                           <div className="text-gray-600 text-sm font-medium">Enterprise Accuracy</div>
                         </div>
                       </div>
                     </div>
-                    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-xl border border-gray-200 min-w-[140px]">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-xl border border-gray-200 min-w-[160px]">
                       <div className="flex items-center space-x-3">
                         <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
                         <div>
-                          <div className="text-gray-900 font-bold text-base">&lt;10ms</div>
+                          <div className="text-gray-900 font-bold text-lg">&lt;10ms</div>
                           <div className="text-gray-600 text-sm font-medium">Response Time</div>
                         </div>
                       </div>
