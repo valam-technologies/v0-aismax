@@ -24,15 +24,15 @@ interface VideoHeroProps {
 const VideoHero: React.FC<VideoHeroProps> = ({
   videoSrc = "https://videos.pexels.com/video-files/3196284/3196284-uhd_2560_1440_25fps.mp4",
   fallbackImage = "https://images.pexels.com/photos/8386440/pexels-photo-8386440.jpeg?auto=compress&cs=tinysrgb&w=1920&h=1080",
-  headline = "Artificial Intelligence Systems Security Solutions That Evolve With Your Business",
-  subheading = "Harness cutting-edge artificial intelligence technology that continuously learns, adapts, and safeguards your enterprise against emerging cyber threats with industry-leading precision and reliability.",
+  headline = "Enterprise Technology Solutions That Transform Your Business",
+  subheading = "Experience next-generation artificial intelligence systems that revolutionize enterprise operations through advanced neural networks, autonomous decision-making algorithms, and predictive intelligence frameworks designed for the future of business.",
   primaryCTA = {
     text: "Get Free Security Assessment",
     href: "/contact",
   },
   secondaryCTA = {
-    text: "Watch Demo",
-    href: "#demo",
+    text: "Contact Us",
+    href: "/contact",
   },
 }) => {
   const videoRef = useRef<HTMLVideoElement>(null)
@@ -98,13 +98,19 @@ const VideoHero: React.FC<VideoHeroProps> = ({
             <div className="hero-text-content">
               {/* Badge */}
               <motion.div
-                className="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-6"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-slate-600/20 to-slate-800/20 backdrop-blur-sm border border-slate-400/30 rounded-full px-6 py-3 mb-6 shadow-lg"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
               >
-                <Sparkles className="w-4 h-4 text-white" />
-                <span className="text-white text-sm font-semibold">Enterprise AI Security Platform</span>
+                <div className="relative">
+                  <Sparkles className="w-4 h-4 text-slate-300 animate-pulse" />
+                  <div className="absolute inset-0 w-4 h-4 bg-slate-300/20 rounded-full animate-ping"></div>
+                </div>
+                <span className="text-white text-sm font-bold tracking-wide">
+                  Advanced Enterprise Intelligence Solutions
+                </span>
+                <div className="w-2 h-2 bg-slate-300 rounded-full animate-pulse"></div>
               </motion.div>
 
               {/* Main Headline */}
@@ -115,10 +121,10 @@ const VideoHero: React.FC<VideoHeroProps> = ({
                 transition={{ duration: 1, delay: 0.3 }}
               >
                 <span className="gradient-text bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
-                  Artificial Intelligence Systems
+                  Enterprise Intelligence Systems
                 </span>
                 <br />
-                Security Solutions That Evolve With Your Business
+                {headline}
               </motion.h1>
 
               {/* Subheading */}
@@ -128,8 +134,7 @@ const VideoHero: React.FC<VideoHeroProps> = ({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5 }}
               >
-                Harness cutting-edge artificial intelligence technology that continuously learns, adapts, and safeguards
-                your enterprise against emerging cyber threats with industry-leading precision and reliability.
+                {subheading}
               </motion.p>
 
               {/* Trust Indicators */}
@@ -140,16 +145,16 @@ const VideoHero: React.FC<VideoHeroProps> = ({
                 transition={{ duration: 1, delay: 0.7 }}
               >
                 <div className="flex items-center space-x-2">
-                  <Award className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300 text-sm font-medium">SOC 2 Certified</span>
+                  <Award className="w-5 h-5 text-slate-300" />
+                  <span className="text-gray-300 text-sm font-medium">Enterprise Certified</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <CheckCircle className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300 text-sm font-medium">99.9% Accuracy</span>
+                  <CheckCircle className="w-5 h-5 text-slate-300" />
+                  <span className="text-gray-300 text-sm font-medium">99.9% Precision</span>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Clock className="w-5 h-5 text-green-400" />
-                  <span className="text-gray-300 text-sm font-medium">24/7 Protection</span>
+                  <Clock className="w-5 h-5 text-slate-300" />
+                  <span className="text-gray-300 text-sm font-medium">Real-time Processing</span>
                 </div>
               </motion.div>
 
@@ -162,14 +167,14 @@ const VideoHero: React.FC<VideoHeroProps> = ({
               >
                 <Link
                   href={primaryCTA.href}
-                  className="cta-primary px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105"
+                  className="cta-primary-gray px-8 py-4 rounded-lg font-semibold text-white transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105"
                 >
                   <span>{primaryCTA.text}</span>
                   <ArrowRight className="w-5 h-5" />
                 </Link>
                 <Link
                   href={secondaryCTA.href}
-                  className="cta-secondary bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105"
+                  className="cta-secondary-gray bg-slate-100/10 backdrop-blur-sm border border-slate-300/30 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 flex items-center justify-center space-x-2 hover:scale-105"
                 >
                   <Play className="w-5 h-5" />
                   <span>{secondaryCTA.text}</span>
@@ -192,8 +197,8 @@ const VideoHero: React.FC<VideoHeroProps> = ({
                   <div className="text-gray-400 text-sm">Detection Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">&lt;30s</div>
-                  <div className="text-gray-400 text-sm">Response Time</div>
+                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">&lt;10ms</div>
+                  <div className="text-gray-400 text-sm">Processing Time</div>
                 </div>
               </motion.div>
             </div>
@@ -246,17 +251,17 @@ const VideoHero: React.FC<VideoHeroProps> = ({
                   {/* AI Features Overlay */}
                   <div className="absolute top-4 right-4 space-y-2">
                     <div className="bg-black/50 backdrop-blur-sm rounded-lg px-3 py-1">
-                      <span className="text-green-400 text-xs font-semibold">DETECTING</span>
+                      <span className="text-slate-300 text-xs font-semibold">PROCESSING</span>
                     </div>
                     <div className="bg-black/50 backdrop-blur-sm rounded-lg px-3 py-1">
-                      <span className="text-blue-400 text-xs font-semibold">ANALYZING</span>
+                      <span className="text-slate-400 text-xs font-semibold">OPTIMIZING</span>
                     </div>
                   </div>
 
                   {/* Video Info */}
                   <div className="absolute bottom-4 left-4">
-                    <h4 className="text-white font-semibold mb-1">AI Security Platform</h4>
-                    <p className="text-gray-300 text-sm">Live Threat Detection & Response</p>
+                    <h4 className="text-white font-semibold mb-1">Enterprise AI Solutions</h4>
+                    <p className="text-gray-300 text-sm">Advanced Intelligence Processing & Analysis</p>
                   </div>
 
                   {/* Enhanced Video Controls */}
@@ -286,19 +291,19 @@ const VideoHero: React.FC<VideoHeroProps> = ({
                 <div className="absolute -bottom-6 -right-6 space-y-3">
                   <div className="bg-white rounded-lg p-3 shadow-lg">
                     <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-green-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-slate-400 rounded-full"></div>
                       <div>
                         <div className="text-black font-bold text-sm">99.9%</div>
-                        <div className="text-gray-600 text-xs">Threat Detection</div>
+                        <div className="text-gray-600 text-xs">Enterprise Accuracy</div>
                       </div>
                     </div>
                   </div>
                   <div className="bg-white rounded-lg p-3 shadow-lg">
                     <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
+                      <div className="w-2 h-2 bg-slate-600 rounded-full"></div>
                       <div>
-                        <div className="text-black font-bold text-sm">&lt;30s</div>
-                        <div className="text-gray-600 text-xs">Response Time</div>
+                        <div className="text-black font-bold text-sm">&lt;10ms</div>
+                        <div className="text-gray-600 text-xs">Processing Time</div>
                       </div>
                     </div>
                   </div>

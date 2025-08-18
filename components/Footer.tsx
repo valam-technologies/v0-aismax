@@ -1,6 +1,7 @@
 "use client"
 import Link from "next/link"
-import { Shield, Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Youtube, ArrowRight } from "lucide-react"
+import { Mail, Phone, MapPin, Linkedin, Twitter, Instagram, Youtube, ArrowRight } from "lucide-react"
+import Image from "next/image"
 
 const Footer = () => {
   return (
@@ -16,15 +17,20 @@ const Footer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
           {/* Company Info */}
           <div className="lg:col-span-1">
-            <Link href="/" className="flex items-center space-x-3 mb-6">
-              <div className="relative">
-                <Shield className="w-10 h-10 text-white" />
-                <div className="absolute inset-0 bg-white/10 rounded-full scale-0 group-hover:scale-110 transition-transform duration-300"></div>
+            <Link href="/" className="flex items-center space-x-3 mb-6 group">
+              <div className="relative flex-shrink-0">
+                <Image
+                  src="/logoback.svg"
+                  alt="AI Powered Solutions Logo"
+                  width={40}
+                  height={40}
+                  className="w-10 h-10 group-hover:scale-110 transition-transform duration-300"
+                />
               </div>
-              <div className="flex flex-col">
+              <div className="flex flex-col min-w-0">
                 <span className="text-xl font-bold text-white">Artificial Intelligence Systems</span>
                 <span className="text-sm font-semibold text-gray-400 uppercase tracking-wider">
-                  AI POWERED SECURITY
+                  AI Powered Solutions
                 </span>
               </div>
             </Link>
@@ -111,10 +117,10 @@ const Footer = () => {
                 </div>
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-gray-400 mt-1" />
-                  <div className="text-gray-300">
-                    <div>153 Sackville Dr</div>
-                    <div>Lower Sackville, NS</div>
-                    <div>B4C 2S9, Canada</div>
+                  <div className="text-gray-300 leading-relaxed">
+                    <div className="font-medium">153 Sackville Dr</div>
+                    <div>Lower Sackville, NS B4C 2S9</div>
+                    <div className="text-sm text-gray-400 mt-1">Canada</div>
                   </div>
                 </div>
               </div>
@@ -134,11 +140,11 @@ const Footer = () => {
                 </div>
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 text-gray-400 mt-1" />
-                  <div className="text-gray-300">
-                    <div>41-2, Jalan PJU 5/20E</div>
+                  <div className="text-gray-300 leading-relaxed">
+                    <div className="font-medium">41-2, Jalan PJU 5/20E</div>
                     <div>Kota Damansara</div>
-                    <div>47810 Petaling Jaya</div>
-                    <div>Selangor, Malaysia</div>
+                    <div>47810 Petaling Jaya, Selangor</div>
+                    <div className="text-sm text-gray-400 mt-1">Malaysia</div>
                   </div>
                 </div>
               </div>

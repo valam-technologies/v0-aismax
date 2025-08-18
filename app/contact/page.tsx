@@ -288,18 +288,18 @@ export default function Contact() {
                             <div className="space-y-2">
                               <div>
                                 <a
-                                  href="mailto:canada@artificialintellegence.ai"
+                                  href="mailto:canada@artificialintelligence.ai"
                                   className="text-blue-400 hover:text-blue-300 font-medium"
                                 >
-                                  canada@artificialintellegence.ai
+                                  canada@artificialintelligence.ai
                                 </a>
                               </div>
                               <div>
                                 <a
-                                  href="mailto:malaysia@artificialintellegence.ai"
+                                  href="mailto:malaysia@artificialintelligence.ai"
                                   className="text-blue-400 hover:text-blue-300 font-medium"
                                 >
-                                  malaysia@artificialintellegence.ai
+                                  malaysia@artificialintelligence.ai
                                 </a>
                               </div>
                             </div>
@@ -343,10 +343,10 @@ export default function Contact() {
                         <div>
                           <span className="text-gray-400">APAC: </span>
                           <a
-                            href="mailto:malaysia@artificialintellegence.ai"
+                            href="mailto:malaysia@artificialintelligence.ai"
                             className="text-red-400 hover:text-red-300 font-medium"
                           >
-                            malaysia@artificialintellegence.ai
+                            malaysia@artificialintelligence.ai
                           </a>
                         </div>
                       </div>

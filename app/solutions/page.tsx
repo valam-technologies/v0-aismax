@@ -302,13 +302,13 @@ export default function Solutions() {
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
               Comprehensive AI-powered security solutions that protect your digital assets, infrastructure, and data
-              from sophisticated cyber threats across all environments and platforms.
+              from sophisticated cyber threats across all environments and solutions.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-colors flex items-center justify-center">
                 <Play className="w-5 h-5 mr-2" />
-                Watch Demo
+                Contact Us
               </button>
               <button className="border border-gray-600 hover:border-gray-500 text-white px-8 py-4 rounded-xl font-semibold transition-colors flex items-center justify-center">
                 Explore Solutions
@@ -562,7 +562,7 @@ export default function Solutions() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-xl font-semibold transition-colors">
-                Schedule a Demo
+                Connect With Us
               </button>
               <button className="border border-gray-600 hover:border-gray-500 text-white px-8 py-4 rounded-xl font-semibold transition-colors">
                 Contact Sales

@@ -65,10 +65,10 @@ const Products = () => {
     },
     {
       name: "AI Security Analytics Dashboard",
-      tagline: "Intelligent security analytics and reporting platform",
+      tagline: "Intelligent security analytics and reporting solutions",
       icon: Smartphone,
       description:
-        "Comprehensive security analytics platform that transforms security data into actionable insights with AI-powered dashboards and predictive intelligence.",
+        "Comprehensive security analytics solutions that transform security data into actionable insights with AI-powered dashboards and predictive intelligence.",
       features: [
         "Real-time security dashboards",
         "Predictive threat analytics",
@@ -86,7 +86,7 @@ const Products = () => {
 
   const solutions = [
     {
-      name: "AI Asset Protection",
+      name: "AI Asset Protection Solutions",
       icon: Shield,
       description:
         "Comprehensive AI-powered protection for physical and digital assets with real-time monitoring and theft prevention.",

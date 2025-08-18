@@ -72,7 +72,7 @@ export default function EnterpriseAISecurity() {
               Discover how AI-powered enterprise security can protect your organization at scale.
             </p>
             <button className="bg-white text-black px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-300 flex items-center justify-center space-x-2 mx-auto">
-              <span>Schedule Enterprise Demo</span>
+              <span>Contact Us</span>
               <ArrowRight className="w-5 h-5" />
             </button>
           </motion.div>
