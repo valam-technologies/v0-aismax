@@ -1,9 +1,9 @@
-# aismax
+# AIS
 
 *Automatically synced with your [v0.app](https://v0.app) deployments*
 
-[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/arjuns-projects-988f709a/v0-aismax)
-[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/FN4EJT9xC3q)
+[![Deployed on Vercel](https://img.shields.io/badge/Deployed%20on-Vercel-black?style=for-the-badge&logo=vercel)](https://vercel.com/nanas-projects-64059dbf/v0-ais)
+[![Built with v0](https://img.shields.io/badge/Built%20with-v0.app-black?style=for-the-badge)](https://v0.app/chat/projects/81kwMDRpRmJ)
 
 ## Overview
 
@@ -14,13 +14,13 @@ Any changes you make to your deployed app will be automatically pushed to this r
 
 Your project is live at:
 
-**[https://vercel.com/arjuns-projects-988f709a/v0-aismax](https://vercel.com/arjuns-projects-988f709a/v0-aismax)**
+**[https://vercel.com/nanas-projects-64059dbf/v0-ais](https://vercel.com/nanas-projects-64059dbf/v0-ais)**
 
 ## Build your app
 
 Continue building your app on:
 
-**[https://v0.app/chat/projects/FN4EJT9xC3q](https://v0.app/chat/projects/FN4EJT9xC3q)**
+**[https://v0.app/chat/projects/81kwMDRpRmJ](https://v0.app/chat/projects/81kwMDRpRmJ)**
 
 ## How It Works
 
