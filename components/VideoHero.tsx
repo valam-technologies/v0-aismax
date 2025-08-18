@@ -93,12 +93,12 @@ const VideoHero: React.FC<VideoHeroProps> = ({
       {/* Main Content */}
       <div className="relative z-10 min-h-screen">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="hero-balanced-grid">
+          <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-5rem)] py-8">
             {/* Left Content */}
-            <div className="hero-text-content">
+            <div className="flex flex-col justify-center space-y-6">
               {/* Badge */}
               <motion.div
-                className="inline-flex items-center space-x-2 bg-gradient-to-r from-slate-600/20 to-slate-800/20 backdrop-blur-sm border border-slate-400/30 rounded-full px-6 py-3 mb-6 shadow-lg"
+                className="inline-flex items-center space-x-2 bg-gradient-to-r from-slate-600/20 to-slate-800/20 backdrop-blur-sm border border-slate-400/30 rounded-full px-6 py-3 shadow-lg w-fit"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
@@ -115,7 +115,7 @@ const VideoHero: React.FC<VideoHeroProps> = ({
 
               {/* Main Headline */}
               <motion.h1
-                className="hero-headline text-white mb-4 text-shadow-lg"
+                className="text-4xl md:text-5xl lg:text-6xl font-bold leading-tight text-white text-shadow-lg"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
@@ -131,7 +131,7 @@ const VideoHero: React.FC<VideoHeroProps> = ({
 
               {/* Subheading */}
               <motion.p
-                className="hero-subheadline text-gray-200 mb-6 max-w-2xl"
+                className="text-lg md:text-xl text-gray-200 leading-relaxed max-w-2xl"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.5 }}
@@ -185,127 +185,152 @@ const VideoHero: React.FC<VideoHeroProps> = ({
 
               {/* Stats */}
               <motion.div
-                className="grid grid-cols-3 gap-8"
+                className="grid grid-cols-3 gap-4 sm:gap-8"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1.1 }}
               >
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">500+</div>
-                  <div className="text-gray-400 text-sm">Protected Assets</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">500+</div>
+                  <div className="text-gray-400 text-xs sm:text-sm">Protected Assets</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">99.9%</div>
-                  <div className="text-gray-400 text-sm">Detection Rate</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">99.9%</div>
+                  <div className="text-gray-400 text-xs sm:text-sm">Detection Rate</div>
                 </div>
                 <div className="text-center">
-                  <div className="text-2xl md:text-3xl font-bold text-white mb-1">&lt;10ms</div>
-                  <div className="text-gray-400 text-sm">Processing Time</div>
+                  <div className="text-xl sm:text-2xl md:text-3xl font-bold text-white mb-1">&lt;10ms</div>
+                  <div className="text-gray-400 text-xs sm:text-sm">Processing Time</div>
                 </div>
               </motion.div>
             </div>
 
             {/* Right Content - Enhanced Video */}
             <motion.div
-              className="relative"
+              className="relative flex justify-center lg:justify-end"
               initial={{ opacity: 0, x: 50 }}
               animate={{ opacity: 1, x: 0 }}
               transition={{ duration: 1, delay: 0.5 }}
             >
-              {/* Decorative Elements */}
-              <div className="absolute -top-4 -left-4 w-full h-full border border-white/20 rounded-2xl"></div>
+              <div className="relative w-full max-w-lg lg:max-w-none">
+                {/* Decorative Elements */}
+                <div className="absolute -top-4 -left-4 w-full h-full border border-white/20 rounded-2xl"></div>
 
-              {/* Main Video Container */}
-              <div
-                className="relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl"
-                onMouseEnter={() => setShowControls(true)}
-                onMouseLeave={() => setShowControls(false)}
-              >
-                {/* Video Element */}
-                {isVideoLoaded ? (
-                  <video
-                    ref={videoRef}
-                    className="w-full h-64 md:h-80 lg:h-96 object-cover"
-                    autoPlay
-                    muted={isMuted}
-                    loop
-                    playsInline
-                    onLoadedData={() => setIsVideoLoaded(true)}
-                    onError={() => setIsVideoLoaded(false)}
-                  >
-                    <source src={videoSrc} type="video/mp4" />
-                  </video>
-                ) : (
-                  <div
-                    className="w-full h-64 md:h-80 lg:h-96 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${fallbackImage})` }}
-                  />
-                )}
-
-                {/* Enhanced Video Overlay */}
-                <div className="absolute inset-0 video-hero-overlay">
-                  {/* Live Indicator */}
-                  <div className="absolute top-4 left-4 flex items-center space-x-2">
-                    <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
-                    <span className="text-white text-sm font-bold">LIVE AI</span>
-                  </div>
-
-                  {/* AI Features Overlay */}
-                  <div className="absolute top-4 right-4 space-y-2">
-                    <div className="bg-black/50 backdrop-blur-sm rounded-lg px-3 py-1">
-                      <span className="text-slate-300 text-xs font-semibold">PROCESSING</span>
-                    </div>
-                    <div className="bg-black/50 backdrop-blur-sm rounded-lg px-3 py-1">
-                      <span className="text-slate-400 text-xs font-semibold">OPTIMIZING</span>
-                    </div>
-                  </div>
-
-                  {/* Video Info */}
-                  <div className="absolute bottom-4 left-4">
-                    <h4 className="text-white font-semibold mb-1">Enterprise AI Solutions</h4>
-                    <p className="text-gray-300 text-sm">Advanced Intelligence Processing & Analysis</p>
-                  </div>
-
-                  {/* Enhanced Video Controls */}
-                  {isVideoLoaded && (
-                    <div
-                      className={`absolute bottom-4 right-4 flex items-center space-x-2 transition-opacity duration-300 ${showControls ? "opacity-100" : "opacity-0"}`}
+                {/* Main Video Container */}
+                <div
+                  className="relative bg-gray-900 rounded-2xl overflow-hidden shadow-2xl w-full"
+                  onMouseEnter={() => setShowControls(true)}
+                  onMouseLeave={() => setShowControls(false)}
+                >
+                  {/* Video Element */}
+                  {isVideoLoaded ? (
+                    <video
+                      ref={videoRef}
+                      className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] object-cover"
+                      autoPlay
+                      muted={isMuted}
+                      loop
+                      playsInline
+                      onLoadedData={() => setIsVideoLoaded(true)}
+                      onError={() => setIsVideoLoaded(false)}
                     >
-                      <button
-                        onClick={togglePlay}
-                        className="p-2 bg-black/50 hover:bg-black/70 text-white rounded-lg transition-colors duration-200"
-                        aria-label={isPlaying ? "Pause video" : "Play video"}
-                      >
-                        {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
-                      </button>
-                      <button
-                        onClick={toggleMute}
-                        className="p-2 bg-black/50 hover:bg-black/70 text-white rounded-lg transition-colors duration-200"
-                        aria-label={isMuted ? "Unmute video" : "Mute video"}
-                      >
-                        {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
-                      </button>
-                    </div>
+                      <source src={videoSrc} type="video/mp4" />
+                    </video>
+                  ) : (
+                    <div
+                      className="w-full h-[300px] sm:h-[400px] md:h-[450px] lg:h-[500px] xl:h-[550px] bg-cover bg-center"
+                      style={{ backgroundImage: `url(${fallbackImage})` }}
+                    />
                   )}
-                </div>
 
-                {/* Floating Stats Cards */}
-                <div className="absolute -bottom-6 -right-6 space-y-3">
-                  <div className="bg-white rounded-lg p-3 shadow-lg">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-slate-400 rounded-full"></div>
-                      <div>
-                        <div className="text-black font-bold text-sm">99.9%</div>
-                        <div className="text-gray-600 text-xs">Enterprise Accuracy</div>
+                  {/* Enhanced Video Overlay */}
+                  <div className="absolute inset-0 video-hero-overlay">
+                    {/* Live Indicator */}
+                    <div className="absolute top-4 left-4 flex items-center space-x-2">
+                      <div className="w-3 h-3 bg-red-500 rounded-full animate-pulse"></div>
+                      <span className="text-white text-sm font-bold">LIVE AI</span>
+                    </div>
+
+                    {/* AI Features Overlay */}
+                    <div className="absolute top-4 right-4 space-y-2">
+                      <div className="bg-black/50 backdrop-blur-sm rounded-lg px-3 py-1">
+                        <span className="text-slate-300 text-xs font-semibold">PROCESSING</span>
+                      </div>
+                      <div className="bg-black/50 backdrop-blur-sm rounded-lg px-3 py-1">
+                        <span className="text-slate-400 text-xs font-semibold">OPTIMIZING</span>
+                      </div>
+                    </div>
+
+                    {/* Video Info */}
+                    <div className="absolute bottom-4 left-4">
+                      <h4 className="text-white font-semibold mb-1">Enterprise AI Solutions</h4>
+                      <p className="text-gray-300 text-sm">Advanced Intelligence Processing & Analysis</p>
+                    </div>
+
+                    {/* Enhanced Video Controls */}
+                    {isVideoLoaded && (
+                      <div
+                        className={`absolute bottom-4 right-4 flex items-center space-x-2 transition-opacity duration-300 ${showControls ? "opacity-100" : "opacity-0"}`}
+                      >
+                        <button
+                          onClick={togglePlay}
+                          className="p-2 bg-black/50 hover:bg-black/70 text-white rounded-lg transition-colors duration-200"
+                          aria-label={isPlaying ? "Pause video" : "Play video"}
+                        >
+                          {isPlaying ? <Pause className="w-4 h-4" /> : <Play className="w-4 h-4" />}
+                        </button>
+                        <button
+                          onClick={toggleMute}
+                          className="p-2 bg-black/50 hover:bg-black/70 text-white rounded-lg transition-colors duration-200"
+                          aria-label={isMuted ? "Unmute video" : "Mute video"}
+                        >
+                          {isMuted ? <VolumeX className="w-4 h-4" /> : <Volume2 className="w-4 h-4" />}
+                        </button>
+                      </div>
+                    )}
+                  </div>
+
+                  <div className="absolute -bottom-8 -right-8 space-y-3 hidden lg:block">
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-xl border border-gray-200 min-w-[140px]">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-emerald-500 rounded-full animate-pulse"></div>
+                        <div>
+                          <div className="text-gray-900 font-bold text-base">99.9%</div>
+                          <div className="text-gray-600 text-sm font-medium">Enterprise Accuracy</div>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-xl border border-gray-200 min-w-[140px]">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                        <div>
+                          <div className="text-gray-900 font-bold text-base">&lt;10ms</div>
+                          <div className="text-gray-600 text-sm font-medium">Response Time</div>
+                        </div>
                       </div>
                     </div>
                   </div>
-                  <div className="bg-white rounded-lg p-3 shadow-lg">
-                    <div className="flex items-center space-x-2">
-                      <div className="w-2 h-2 bg-slate-600 rounded-full"></div>
-                      <div>
-                        <div className="text-black font-bold text-sm">&lt;10ms</div>
-                        <div className="text-gray-600 text-xs">Processing Time</div>
+
+                  {/* Mobile Stats - Positioned differently for mobile */}
+                  <div className="absolute bottom-4 left-4 right-4 sm:hidden">
+                    <div className="flex justify-between space-x-2">
+                      <div className="bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg flex-1">
+                        <div className="flex items-center justify-center space-x-1">
+                          <div className="w-1.5 h-1.5 bg-emerald-500 rounded-full"></div>
+                          <div className="text-center">
+                            <div className="text-gray-900 font-bold text-xs">99.9%</div>
+                            <div className="text-gray-600 text-[10px]">Accuracy</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="bg-white/90 backdrop-blur-sm rounded-lg p-2 shadow-lg flex-1">
+                        <div className="flex items-center justify-center space-x-1">
+                          <div className="w-1.5 h-1.5 bg-blue-500 rounded-full"></div>
+                          <div className="text-center">
+                            <div className="text-gray-900 font-bold text-xs">&lt;10ms</div>
+                            <div className="text-gray-600 text-[10px]">Response</div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
