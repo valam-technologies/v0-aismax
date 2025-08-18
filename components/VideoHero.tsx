@@ -120,11 +120,13 @@ const VideoHero: React.FC<VideoHeroProps> = ({
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 0.3 }}
               >
-                <span className="gradient-text bg-gradient-to-r from-white via-gray-200 to-white bg-clip-text text-transparent">
-                  Enterprise Intelligence Systems
+                <span className="gradient-text bg-gradient-to-r from-white via-slate-200 to-slate-400 bg-clip-text text-transparent">
+                  Next-Generation Intelligence
                 </span>
                 <br />
-                {headline}
+                <span className="bg-gradient-to-r from-slate-100 to-white bg-clip-text text-transparent">
+                  Powering Tomorrow's Enterprise
+                </span>
               </motion.h1>
 
               {/* Subheading */}
