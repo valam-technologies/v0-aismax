@@ -310,7 +310,7 @@ export default function Contact() {
                                   href="mailto:canada@artificialintelligence.ai"
                                   className="text-gray-300 hover:text-gray-200 font-medium"
                                 >
-                                  canada@artificialintelligence.ai
+                                  canada@artificialintellegence.ai
                                 </a>
                               </div>
                               <div>
@@ -318,7 +318,7 @@ export default function Contact() {
                                   href="mailto:malaysia@artificialintelligence.ai"
                                   className="text-gray-300 hover:text-gray-200 font-medium"
                                 >
-                                  malaysia@artificialintelligence.ai
+                                  malaysia@artificialintellegence.ai
                                 </a>
                               </div>
                             </div>
