@@ -74,7 +74,7 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email Addresses",
-      details: "canada@artificialintelligence.ai | malaysia@artificialintelligence.ai",
+      details: "canada@artificialintellegence.ai | malaysia@artificialintellegence.ai",
       subtitle: "North America & APAC Offices - We respond within 2 hours",
     },
   ]
@@ -93,27 +93,44 @@ export default function Contact() {
             <div className="flex justify-center mb-6">
               <div className="relative">
                 <Shield className="w-16 h-16 text-gray-400" />
-                <Sparkles className="w-6 h-6 text-gray-300 absolute -top-2 -right-2" />
+                <Sparkles className="w-6 h-6 text-emerald-400 absolute -top-2 -right-2" />
               </div>
             </div>
 
             <h1 className="text-5xl md:text-7xl font-bold mb-6">
               <span className="bg-gradient-to-r from-white via-gray-300 to-gray-500 bg-clip-text text-transparent">
-                Contact Our Experts
+                Connect with AI
               </span>
               <br />
               <span className="bg-gradient-to-r from-gray-300 to-gray-500 bg-clip-text text-transparent">
-                Let's Transform Your
+                Systems Experts
               </span>
               <br />
-              <span className="bg-gradient-to-r from-gray-400 to-gray-600 bg-clip-text text-transparent">
-                Business Together
+              <span className="bg-gradient-to-r from-emerald-400 to-gray-600 bg-clip-text text-transparent">
+                Transform Your Enterprise
               </span>
             </h1>
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">
-              Ready to enhance your operations with artificial intelligence? Our AI experts are here to help you
-              implement the perfect intelligent technology solution for your organization's unique needs.
+            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
+              Partner with Artificial Intelligence Systems - the leading provider of enterprise AI solutions. Our
+              advanced machine learning, computer vision, and intelligent automation technologies deliver measurable ROI
+              and competitive advantage across industries.
             </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto mt-12">
+              <div className="bg-gray-900/50 p-6 rounded-xl border border-gray-800">
+                <div className="text-emerald-400 text-2xl font-bold mb-2">99.7%</div>
+                <div className="text-gray-300 text-sm">AI Model Accuracy</div>
+              </div>
+              <div className="bg-gray-900/50 p-6 rounded-xl border border-gray-800">
+                <div className="text-emerald-400 text-2xl font-bold mb-2">24/7</div>
+                <div className="text-gray-300 text-sm">AI-Powered Support</div>
+              </div>
+              <div className="bg-gray-900/50 p-6 rounded-xl border border-gray-800">
+                <div className="text-emerald-400 text-2xl font-bold mb-2">500+</div>
+                <div className="text-gray-300 text-sm">Enterprise Deployments</div>
+              </div>
+            </div>
+            {/* </CHANGE> */}
           </motion.div>
         </div>
       </section>
@@ -244,9 +261,11 @@ export default function Contact() {
               <div>
                 <h2 className="text-3xl font-bold mb-6 text-white">Contact Information</h2>
                 <p className="text-gray-400 leading-relaxed mb-8">
-                  Get in touch with our AI technology experts. We're here to answer your questions and help you
-                  implement intelligent solutions that transform your organization.
+                  Connect with our AI Systems engineering team. We specialize in deploying enterprise-grade artificial
+                  intelligence solutions including machine learning models, computer vision systems, natural language
+                  processing, and intelligent automation platforms.
                 </p>
+                {/* </CHANGE> */}
               </div>
 
               <div className="space-y-6">
@@ -291,7 +310,7 @@ export default function Contact() {
                                   href="mailto:canada@artificialintelligence.ai"
                                   className="text-gray-300 hover:text-gray-200 font-medium"
                                 >
-                                  canada@artificialintelligence.ai
+                                  canada@artificialintellegence.ai
                                 </a>
                               </div>
                               <div>
@@ -299,7 +318,7 @@ export default function Contact() {
                                   href="mailto:malaysia@artificialintelligence.ai"
                                   className="text-gray-300 hover:text-gray-200 font-medium"
                                 >
-                                  malaysia@artificialintelligence.ai
+                                  malaysia@artificialintellegence.ai
                                 </a>
                               </div>
                             </div>
@@ -329,9 +348,10 @@ export default function Contact() {
                     <div className="flex-1">
                       <h3 className="text-xl font-semibold text-white mb-2">Technology Emergency?</h3>
                       <p className="text-gray-300 mb-4">
-                        If you're experiencing a critical technology incident, contact our AI-powered emergency response
-                        team immediately.
+                        Critical AI system failure or security breach? Our emergency response team provides immediate
+                        technical support for mission-critical artificial intelligence infrastructure.
                       </p>
+                      {/* </CHANGE> */}
 
                       <div className="space-y-2">
                         <div>
@@ -369,10 +389,11 @@ export default function Contact() {
             viewport={{ once: true }}
             className="text-center mb-16"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Frequently Asked Questions</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">AI Systems FAQ</h2>
             <p className="text-xl text-gray-300">
-              Quick answers to common questions about our AI technology solutions.
+              Technical answers about our artificial intelligence systems and enterprise AI deployment process.
             </p>
+            {/* </CHANGE> */}
           </motion.div>
 
           <div className="space-y-6">

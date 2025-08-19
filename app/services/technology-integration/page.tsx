@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Network, Code, Database, Monitor, Zap, Shield, Cpu, Cloud } from "lucide-react"
+import Footer from "../../components/Footer"
 
 export default function TechnologyIntegrationPage() {
   const integrationServices = [
@@ -205,6 +206,9 @@ export default function TechnologyIntegrationPage() {
           </motion.div>
         </div>
       </section>
+
+      {/* Footer */}
+      <Footer />
     </div>
   )
 }

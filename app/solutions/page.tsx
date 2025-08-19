@@ -13,6 +13,7 @@ import {
   Monitor,
   Smartphone,
 } from "lucide-react"
+import Footer from "../components/Footer"
 
 export default function Solutions() {
   const heroSolutions = [
@@ -571,6 +572,8 @@ export default function Solutions() {
           </motion.div>
         </div>
       </section>
+
+      <Footer />
     </div>
   )
 }
