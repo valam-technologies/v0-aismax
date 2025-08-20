@@ -1,7 +1,6 @@
 "use client"
 import { motion } from "framer-motion"
 import { Camera, Eye, Shield, Zap, CheckCircle, BarChart3, Lock, AlertTriangle, Play } from "lucide-react"
-import Footer from "../../components/Footer"
 
 export default function AIVideoSurveillance() {
   const features = [
@@ -84,6 +83,25 @@ export default function AIVideoSurveillance() {
         "On-premise options",
       ],
       popular: false,
+    },
+  ]
+
+  const testimonials = [
+    {
+      name: "Sarah Chen",
+      role: "Security Director",
+      company: "TechCorp Industries",
+      content:
+        "The AI video surveillance system has transformed our security operations. We've seen a 95% reduction in false alarms and our response times have improved dramatically.",
+      image: "https://images.pexels.com/photos/3785079/pexels-photo-3785079.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
+    },
+    {
+      name: "Michael Rodriguez",
+      role: "Facilities Manager",
+      company: "Global Manufacturing",
+      content:
+        "The behavioral analysis features are incredible. We can now identify potential issues before they escalate, which has significantly improved our workplace safety.",
+      image: "https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg?auto=compress&cs=tinysrgb&w=150&h=150",
     },
   ]
 
@@ -259,8 +277,53 @@ export default function AIVideoSurveillance() {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Testimonials Section */}
       <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">What Our Clients Say</h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Hear from security professionals who trust our AI-powered surveillance solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 p-8 rounded-2xl border border-gray-800"
+              >
+                <div className="flex items-center mb-6">
+                  <img
+                    src={testimonial.image || "/placeholder.svg"}
+                    alt={testimonial.name}
+                    className="w-12 h-12 rounded-full mr-4"
+                  />
+                  <div>
+                    <h4 className="text-white font-semibold">{testimonial.name}</h4>
+                    <p className="text-gray-400 text-sm">{testimonial.role}</p>
+                    <p className="text-gray-500 text-sm">{testimonial.company}</p>
+                  </div>
+                </div>
+                <p className="text-gray-300 leading-relaxed italic">"{testimonial.content}"</p>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 px-4 bg-gray-900">
         <div className="max-w-4xl mx-auto text-center">
           <motion.div initial={{ opacity: 0, y: 30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}>
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Ready to Upgrade Your Video Security?</h2>
@@ -278,7 +341,6 @@ export default function AIVideoSurveillance() {
           </motion.div>
         </div>
       </section>
-      <Footer />
     </div>
   )
 }

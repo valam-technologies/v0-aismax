@@ -222,6 +222,64 @@ export default function ConsultingEngineer() {
           </div>
         </section>
 
+        {/* Testimonials */}
+        <section className="py-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="text-center mb-16"
+            >
+              <h2 className="text-4xl font-bold text-white mb-6">Client Success Stories</h2>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {[
+                {
+                  quote:
+                    "The consulting team transformed our security infrastructure with their AI expertise. We've seen a 75% reduction in false positives and significantly improved threat detection.",
+                  author: "Sarah Johnson",
+                  title: "CTO, TechCorp Industries",
+                  company: "Fortune 500 Manufacturing",
+                },
+                {
+                  quote:
+                    "Their strategic approach and technical expertise helped us implement a comprehensive AI security solution that scales with our business growth.",
+                  author: "Michael Chen",
+                  title: "Security Director",
+                  company: "Global Financial Services",
+                },
+              ].map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ delay: index * 0.1 }}
+                  viewport={{ once: true }}
+                  className="bg-gray-800/50 p-8 rounded-xl border border-gray-700"
+                >
+                  <p className="text-gray-300 text-lg mb-6 italic">"{testimonial.quote}"</p>
+                  <div className="flex items-center">
+                    <div className="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mr-4">
+                      {testimonial.author
+                        .split(" ")
+                        .map((n) => n[0])
+                        .join("")}
+                    </div>
+                    <div>
+                      <div className="text-white font-semibold">{testimonial.author}</div>
+                      <div className="text-gray-400">{testimonial.title}</div>
+                      <div className="text-gray-500 text-sm">{testimonial.company}</div>
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
         {/* CTA Section */}
         <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-800">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">

@@ -74,7 +74,7 @@ export default function Contact() {
     {
       icon: Mail,
       title: "Email Addresses",
-      details: "canada@artificialintellegence.ai | malaysia@artificialintellegence.ai",
+      details: "canada@artificialintelligence.ai | malaysia@artificialintelligence.ai",
       subtitle: "North America & APAC Offices - We respond within 2 hours",
     },
   ]

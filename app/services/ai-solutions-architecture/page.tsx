@@ -16,7 +16,6 @@ import {
   Settings,
   Globe,
 } from "lucide-react"
-import Footer from "../../components/Footer"
 
 export default function AISolutionsArchitecturePage() {
   const architectureServices = [
@@ -181,6 +180,28 @@ export default function AISolutionsArchitecturePage() {
       image: "https://images.pexels.com/photos/264636/pexels-photo-264636.jpeg?auto=compress&cs=tinysrgb&w=600&h=400",
       applications: ["Recommendation engines", "Inventory optimization", "Price optimization", "Customer analytics"],
       results: "45% increase in sales, 20% inventory cost reduction",
+    },
+  ]
+
+  const testimonials = [
+    {
+      quote: "Their AI architecture transformed our operations, delivering 60% efficiency gains within 6 months.",
+      author: "Sarah Chen",
+      position: "CTO, TechCorp Industries",
+      company: "Fortune 500 Manufacturing",
+    },
+    {
+      quote:
+        "The custom AI solution they built increased our fraud detection rate to 98% while reducing false positives.",
+      author: "Michael Rodriguez",
+      position: "Head of Security, FinanceFirst",
+      company: "Leading Financial Institution",
+    },
+    {
+      quote: "Their strategic approach to AI implementation gave us a clear roadmap and measurable ROI from day one.",
+      author: "Dr. Emily Watson",
+      position: "Chief Innovation Officer",
+      company: "Healthcare Systems Group",
     },
   ]
 
@@ -489,6 +510,44 @@ export default function AISolutionsArchitecturePage() {
         </div>
       </section>
 
+      <section className="py-20 px-4">
+        <div className="max-w-6xl mx-auto">
+          <motion.div
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            viewport={{ once: true }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">Client Success Stories</h2>
+            <p className="text-xl text-gray-300 max-w-4xl mx-auto">
+              Hear from industry leaders who have transformed their businesses with our AI solutions.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {testimonials.map((testimonial, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                viewport={{ once: true }}
+                className="bg-gray-900 p-8 rounded-2xl border border-gray-800"
+              >
+                <div className="text-4xl text-blue-400 mb-4">"</div>
+                <p className="text-gray-300 mb-6 leading-relaxed italic">{testimonial.quote}</p>
+                <div>
+                  <div className="text-white font-semibold">{testimonial.author}</div>
+                  <div className="text-gray-400 text-sm">{testimonial.position}</div>
+                  <div className="text-blue-400 text-sm">{testimonial.company}</div>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Enhanced Process Section */}
       <section className="py-20 px-4 bg-gray-900">
         <div className="max-w-6xl mx-auto">
@@ -583,8 +642,6 @@ export default function AISolutionsArchitecturePage() {
           </motion.div>
         </div>
       </section>
-
-      <Footer />
     </div>
   )
 }

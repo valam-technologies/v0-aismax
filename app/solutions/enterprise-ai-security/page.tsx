@@ -13,7 +13,6 @@ import {
   Cpu,
   Network,
 } from "lucide-react"
-import Footer from "../../components/Footer"
 
 export default function EnterpriseAISecurity() {
   const features = [
@@ -328,9 +327,6 @@ export default function EnterpriseAISecurity() {
           </motion.div>
         </div>
       </section>
-
-      {/* Footer Section */}
-      <Footer />
     </div>
   )
 }
